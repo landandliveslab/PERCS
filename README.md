@@ -128,7 +128,8 @@ geemap.ee_export_image(
     image, filename=dir, scale=5, region=aoi, file_per_band=False
 )
 ```
-Your dowloaded image should now be located in your specified output directory. Congrats! Please fallow the [Jupyter notebook walkthrough](https://github.com/landandliveslab/PERCS/blob/main/geemap_download_tutorial.ipynb) for a more detailed tutorial.
+Your dowloaded image should now be located in your specified output directory. Congrats! 
+For ease, please follow the [Jupyter notebook walkthrough](https://github.com/landandliveslab/PERCS/blob/main/geemap_download_tutorial.ipynb) with all code chunks loaded.
 
 
 
