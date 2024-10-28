@@ -115,3 +115,21 @@ Map.addLayer(data,
 'LCC2020 classification')
 Map.centerObject(data, 10)
 ```
+To download the portion of the image corresponding to our AOI, we can clip the data our AOI using:
+```
+image = data.clip(aoi)
+```
+
+We can then export the clipped data ('image') by specifying our export parameters ('dir'), and using the geemap.ee_export_image function. 
+```
+cwd = os.getcwd()
+dir = os.path.join(cwd, 'export.tif')
+geemap.ee_export_image(
+    image, filename=dir, scale=5, region=aoi, file_per_band=False
+)
+```
+Your dowloaded image should now be located in your specified output directory. Congrats!
+
+
+
+
