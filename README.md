@@ -84,5 +84,34 @@ aoi = ee.Geometry.Polygon([
             ]])
 Map.addLayer(aoi, {}, "AOI")
 ```
+This will create the area extent that we can use to download the imagery, as well visualise it. The middle parameter '{}' can be used to customise symbology. 
 
-
+We can then proceed to load in our landcover data:
+```
+data = ee.Image('projects/ee-jeremyallen248/assets/PERCS/LCC2020')
+```
+We can visualise the different classes by creating a custom palette:
+```
+LCC2020_palette = [
+'ffffff', 
+'808080', 
+'c0c0c0', 
+'f0f0f0', 
+'ffcc66', 
+'006400', 
+'00ff00', 
+'8b4513', 
+'7cfc00', 
+'32cd32', 
+'8b0000', 
+'0000ff', 
+'000000', 
+'ffffff', 
+'556b2f', 
+'2e8b57'  
+]
+Map.addLayer(data,
+{"min": 0, "max": 16, "palette": LCC2020_palette},
+'LCC2020 classification')
+Map.centerObject(data, 10)
+```
