@@ -9,4 +9,11 @@ Several datasets have been uploaded to Earth Engine as part of the PERCS project
 
 To download these datasets directly to your local machine, it is recommended to use the [geemap](https://docs.google.com/spreadsheets/d/1_QopU1qFSOyDjQoQF8TCHs9Qjxr3jFTy-ueFWEWFIis/edit?usp=sharing) Python package. It is possible to export images from Earth Engine in the default JavaScript API using the ['Exporting Images'](https://developers.google.com/earth-engine/guides/exporting_images) function, however it is necessary for these downloads to be processed using Google Drive which slows down the process. geemap offers a method for directly downloading images. 
 
+To use geemap, begin by installing the geemap package using the [PyPi](https://pypi.org/project/geemap) or [Conda forge](https://anaconda.org/conda-forge/geemap) method. To connect geemap with Earth Engine, it is also necessary to install the [Earth Engine Python API](https://developers.google.com/earth-engine/guides/python_install). One you have installed the packages and loaded them as librairies, connect to Earth Engine by running:
+
+```
+Map = geemap.Map()
+Map
+```
+
 
