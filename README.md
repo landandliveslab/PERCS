@@ -60,4 +60,29 @@ For this tutorial, we will simmulate downloading landcover data from the Vancouv
 You can load the above text in [geojson.io](https://geojson.io/#map=12.79/49.17904/-123.04251) to visualise the extent. 
 
 You can load this polygon into earth engine using:
+```
+aoi = ee.Geometry.Polygon([
+            [
+              -123.0685876163603,
+              49.197239615150295
+            ],
+            [
+              -123.0685876163603,
+              49.170427720086934
+            ],
+            [
+              -123.02537876329515,
+              49.170427720086934
+            ],
+            [
+              -123.02537876329515,
+              49.197239615150295
+            ],
+            [
+              -123.0685876163603,
+              49.197239615150295
+            ]])
+Map.addLayer(aoi, {}, "AOI")
+```
+
 
