@@ -15,5 +15,49 @@ To use geemap, begin by installing the geemap package using the [PyPi](https://p
 Map = geemap.Map()
 Map
 ```
+You will be prompted to grant permission to your Earth Engine account. Once you have done this, enter the code that is provided into your IDE, and proceed. 
 
+For this tutorial, we will simmulate downloading landcover data from the Vancouver landcover classification to our local machine. To download an image, we have to specify a spatial extent over which we are downloading the image. We will download a small area in Richmond, denoted by the following geojson:
+```
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -123.0685876163603,
+              49.197239615150295
+            ],
+            [
+              -123.0685876163603,
+              49.170427720086934
+            ],
+            [
+              -123.02537876329515,
+              49.170427720086934
+            ],
+            [
+              -123.02537876329515,
+              49.197239615150295
+            ],
+            [
+              -123.0685876163603,
+              49.197239615150295
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 0
+    }
+  ]
+}
+```
+You can load the above text in [geojson.io](https://geojson.io/#map=12.79/49.17904/-123.04251) to visualise the extent. 
+
+You can load this polygon into earth engine using:
 
